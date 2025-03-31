@@ -33,6 +33,7 @@ div#board > button {
   border-radius: 10px;
   background: #555;
   color: white;
+  transition: transform 0.5s ease-in-out 0.3s;
 }
 
 div#board > button:hover {
@@ -41,14 +42,6 @@ div#board > button:hover {
   cursor: pointer;
 }
 
-@keyframes turning {
-  0% {
-    width: 62.5;
-  }
-  50% {
-    width: 12.5;
-  }
-  100% {
-    width: 62.5;
-  }
+div#board > button.revealed {
+  transform: rotateY(180deg);
 }
